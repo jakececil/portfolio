@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archive | Jake Cecil</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="site-shell archive-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html">Jake Cecil</a>
+      <nav class="nav">
+        <a class="active" href="archive.html">Archive</a>
+        <a href="selected-work.html">Selected Work</a>
+        <a href="experiments.html">Experiments</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="archive-page archive-page--void">
+      <section class="archive-header archive-header--minimal">
+        <div>
+          <p class="eyebrow">Worldbuilding archive</p>
+          <h1>Objects in the dark</h1>
+          <p class="archive-subtle">Toggle collections on and off, then drift through the current field.</p>
+        </div>
+        <div class="archive-controls">
+          <button class="button small active" data-view="grid">Grid</button>
+          <button class="button small" data-view="single">Single</button>
+          <button class="button small" id="shuffleButton">Shuffle</button>
+        </div>
+      </section>
+
+      <section class="collection-panel" aria-label="Collection controls">
+        <div class="collection-panel__meta">
+          <p class="eyebrow">Collections</p>
+          <p class="collection-panel__status" id="collectionStatus">Loading collections…</p>
+        </div>
+        <div class="collection-toggles" id="collectionToggles"></div>
+      </section>
+
+      <section class="archive-stage archive-stage--void view-grid" id="archiveStage" aria-live="polite"></section>
+    </main>
+  </div>
+
+  <div class="viewer-overlay" id="viewerOverlay" aria-hidden="true">
+    <div class="viewer-backdrop" id="viewerBackdrop"></div>
+    <div class="viewer-shell" role="dialog" aria-modal="true" aria-label="Single image view">
+      <button class="viewer-close" id="viewerClose" aria-label="Close single view">×</button>
+      <div class="viewer-topline">
+        <span class="viewer-counter" id="viewerCounter">1 / 1</span>
+        <span class="viewer-collection" id="viewerCollection"></span>
+      </div>
+      <div class="viewer-stage" id="viewerStage">
+        <button class="viewer-zone viewer-zone--left" id="viewerPrev" aria-label="Previous image"></button>
+        <img id="viewerImage" src="" alt="" />
+        <button class="viewer-zone viewer-zone--right" id="viewerNext" aria-label="Next image"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/gallery.js"></script>
+</body>
+</html>
